@@ -2,13 +2,7 @@ plotly
 streamlit
 pandas
 streamlit_lottie
-matplotlib.pyplot
+matplotlib
 requests
 sklearn
-sklearn.model_selection
-sklearn.decomposition
-sklearn.svm
-sklearn.neighbors
-sklearn.ensemble
-sklearn.metrics
 time
