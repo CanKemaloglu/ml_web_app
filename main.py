@@ -1,4 +1,6 @@
 import time
+
+import pandas as pd
 import requests
 
 import streamlit as st
@@ -87,10 +89,17 @@ def get_dataset(name):
     data = None
     if name == "Iris":
         data = datasets.load_iris()
+        df = pd.DataFrame(data=data.data, columns=data.feature_names)
+        if st.checkbox("Show Dataset"):
+            st.write(df)
     elif name == "Wine":
         data = datasets.load_wine()
+        df = pd.DataFrame(data=data.data, columns=data.feature_names)
+        st.write(df)
     else:
         data = datasets.load_breast_cancer()
+        df = pd.DataFrame(data=data.data, columns=data.feature_names)
+        st.write(df)
     X = data.data
     y = data.target
     return X,y
