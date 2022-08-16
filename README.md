@@ -1,6 +1,8 @@
 # Interactive Web App with Streamlit and Scikit-learn
 Explore different datasets and classifier.
 
+Go To app 🚀🚀 https://cankemaloglu-ml-web-app-main-4suvq7.streamlitapp.com/
+
 ![Screenshot_5](https://user-images.githubusercontent.com/108472471/184943690-baac3959-59fd-40c2-b19e-07c8cbf5e658.png)
 
 ## Choose dataset, classifier and params
