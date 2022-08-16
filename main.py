@@ -95,11 +95,13 @@ def get_dataset(name):
     elif name == "Wine":
         data = datasets.load_wine()
         df = pd.DataFrame(data=data.data, columns=data.feature_names)
-        st.write(df)
+        if st.checkbox("Show Dataset"):
+            st.write(df)
     else:
         data = datasets.load_breast_cancer()
         df = pd.DataFrame(data=data.data, columns=data.feature_names)
-        st.write(df)
+        if st.checkbox("Show Dataset"):
+            st.write(df)
     X = data.data
     y = data.target
     return X,y
