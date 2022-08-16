@@ -5,4 +5,3 @@ streamlit_lottie
 matplotlib
 requests
 sklearn
-time
