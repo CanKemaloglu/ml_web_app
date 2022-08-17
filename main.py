@@ -27,10 +27,13 @@ lottie_url_hello = "https://assets1.lottiefiles.com/packages/lf20_w51pcehl.json"
 lottie_url_download = "https://assets4.lottiefiles.com/private_files/lf30_t26law.json"
 lottie_url_dataset = "https://assets7.lottiefiles.com/packages/lf20_a4oisbpo.json"
 lottie_url_rocket = "https://assets2.lottiefiles.com/packages/lf20_l3qxn9jy.json"
+lottie_url_start = "https://assets7.lottiefiles.com/packages/lf20_k8rnjesv.json"
+
 lottie_hello = load_lottieurl(lottie_url_hello)
 lottie_download = load_lottieurl(lottie_url_download)
 lottie_dataset = load_lottieurl(lottie_url_dataset)
 lottie_rocket = load_lottieurl(lottie_url_rocket)
+lottie_start = load_lottieurl(lottie_url_start)
 
 col1, col2= st.columns(2)
 with col1:
@@ -43,6 +46,15 @@ st.write("""
 # Explore different classifier and datasets
 Which one is the best?
 """)
+
+#Articles
+with st.sidebar:
+    st_lottie(lottie_start, key="start", height=100, width=300, )
+st.sidebar.header("Articles")
+st.sidebar.caption(f"[PCA using Python (scikit-learn)](https://medium.com/towards-data-science/pca-using-python-scikit-learn-e653f8989e60)")
+st.sidebar.caption(f"[What is KNN ?](https://medium.datadriveninvestor.com/k-nearest-neighbors-knn-algorithm-bd375d14eec7)")
+st.sidebar.caption(f"[What is SVM ?](https://medium.com/towards-data-science/https-medium-com-pupalerushikesh-svm-f4b42800e989)")
+st.sidebar.caption(f"[What is Random Forest ?](https://medium.com/@williamkoehrsen/random-forest-simple-explanation-377895a60d2d)")
 
 # Sidebar Selectboxws
 
@@ -58,12 +70,16 @@ classifier_name = st.sidebar.selectbox(
 
 ## Sidebar Classifier Info Link
 
+
+
 if classifier_name == "KNN":
 
     classifier_info  = st. sidebar.info(f"Go to Scikit Learn [{classifier_name}](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.NearestNeighbors.html#sklearn.neighbors.NearestNeighbors) Page")
+
 elif classifier_name == "SVM":
     classifier_info = st.sidebar.info(
         f"Go to Scikit Learn [{classifier_name}](https://scikit-learn.org/stable/modules/generated/sklearn.svm.SVC.html?highlight=svm) Page")
+
 else:
     classifier_info = st.sidebar.info(
         f"Go to Scikit Learn [{classifier_name}](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html#sklearn.ensemble.RandomForestClassifier) Page")
