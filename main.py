@@ -43,7 +43,7 @@ with col2:
     st.title('Welcome to Machine Learning Web App')
 
 st.write("""
-# Explore different classifier and datasets
+## Explore different classifier and datasets
 Which one is the best?
 """)
 
@@ -89,15 +89,15 @@ else:
 
 _left, _right = st.columns(2)
 with _left:
-    st.write(f"## Dataset: {dataset_name} ")
+    st.write(f"### Dataset: {dataset_name} ")
 with _right:
-    st_lottie(lottie_dataset, key="dataset", loop=False, speed=0.5, height=70, width=100)
+    st_lottie(lottie_dataset, key="dataset", loop=False, speed=0.5, height=50, width=100)
 
 _left1, _right2 = st.columns(2)
 with _left1:
-    st.write(f"## Classifier: {classifier_name} ")
+    st.write(f"### Classifier: {classifier_name} ")
 with _right2:
-    st_lottie(lottie_dataset, key="classifier", loop=False, speed=0.5, height=70, width=100)
+    st_lottie(lottie_dataset, key="classifier", loop=False, speed=0.5, height=50, width=100)
 
 #Getting data ready
 
@@ -133,6 +133,7 @@ with class_col:
 
 #Getting parameters & classifiers ready
 
+st.sidebar.header("Parameters")
 def add_parameter_ui(clf_name):
     params = dict()
     if clf_name == 'SVM':
