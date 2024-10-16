@@ -3,6 +3,9 @@ import time
 import pandas as pd
 import requests
 
+import os
+os.environ['SKLEARN_ALLOW_DEPRECATED_SKLEARN_PACKAGE_INSTALL'] = 'True'
+
 import streamlit as st
 import numpy as np
 from streamlit_lottie import st_lottie
@@ -15,6 +18,7 @@ from scikit-learn.svm import SVC
 from scikit-learn.neighbors import KNeighborsClassifier
 from scikit-learn.ensemble import RandomForestClassifier
 from scikit-learn.metrics import accuracy_score
+
 
 @st.cache
 def load_lottieurl(url: str):
