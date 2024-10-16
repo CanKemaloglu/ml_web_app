@@ -8,13 +8,13 @@ import numpy as np
 from streamlit_lottie import st_lottie
 from streamlit_lottie import st_lottie_spinner
 import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.model_selection import train_test_split
-from sklearn.decomposition import PCA
-from sklearn.svm import SVC
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.metrics import accuracy_score
+from scikit-learn import datasets
+from scikit-learn.model_selection import train_test_split
+from scikit-learn.decomposition import PCA
+from scikit-learn.svm import SVC
+from scikit-learn.neighbors import KNeighborsClassifier
+from scikit-learn.ensemble import RandomForestClassifier
+from scikit-learn.metrics import accuracy_score
 
 @st.cache
 def load_lottieurl(url: str):
